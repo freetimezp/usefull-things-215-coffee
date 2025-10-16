@@ -17,11 +17,25 @@ body {
     justify-content: center;
     align-items: center;
     background: #607d8b;
+    background: url(../images/bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
 }
 
 .container {
     position: relative;
     top: 50px;
+    left: 25%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .cup {
@@ -31,6 +45,11 @@ body {
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
+}
+
+.cup:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
 
 .top {
